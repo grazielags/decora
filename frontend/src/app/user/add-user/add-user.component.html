@@ -1,0 +1,35 @@
+<div class="col-md-6">
+    <h2 class="text-center">Adicionar User</h2>
+    <form name="addUserForm" role="form" novalidate #addUserForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="user.name" />
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <br/>
+            <input type="text" class="form-control" name="email" id="email" [(ngModel)]="user.email">
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="text" class="form-control" name="password" id="password" [(ngModel)]="user.password" />
+        </div>
+        <div class="form-group">
+            <label for="address">Endereço:</label>
+            <br/>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="user.address">
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone:</label>
+            <br/>
+            <input type="number" class="form-control" name="phone" id="phone" [(ngModel)]="user.phone">
+        </div>
+        <div class="form-group">
+            <select class="form-control" id="role" name="role" [(ngModel)]="user.profile" required>
+                <option value="ADMIN">Admin</option>
+                <option value="USER">User</option>
+            </select>
+        </div>
+        <button class="btn btn-success">Salvar</button>
+    </form>
+</div>
